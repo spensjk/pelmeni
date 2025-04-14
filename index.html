@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Домашні пельмені з доставкою у Харкові. Свіжі інгредієнти, автентичний смак, швидка доставка." />
+  <title>Пельмені по-домашньому | Доставка у Харкові</title>
+  <style>
+    :root {
+      --primary: #fbeaea;
+      --accent: #f28b82;
+      --light: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--primary);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--light);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .carousel img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 1rem;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--light);
+      border-radius: 1rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 4px 10px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px var(--shadow);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: var(--accent);
+      color: white;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #e66a5c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--light);
+      box-shadow: 0 -2px 6px var(--shadow);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .carousel {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Пельмені по-домашньому</h1>
+      <ul>
+        <li><a href="#home">Головна</a></li>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#contact">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="carousel">
+    <img src="1.jpg" alt="Класичні домашні пельмені" />
+    <img src="2.jpg" alt="Пельмені зі свининою" />
+    <img src="3.jpg" alt="Пельмені з яловичиною" />
+    <img src="4.jpg" alt="Пельмені з куркою та зеленню" />
+  </div>
+
+  <main>
+    <section id="home">
+      <h2>Ласкаво просимо!</h2>
+      <p>Ми доставляємо справжні домашні пельмені по Харкову. Смачні, свіжі та приготовлені з любов’ю. Акція тижня: при замовленні від 2 кг — соус у подарунок!</p>
+    </section>
+
+    <section id="about">
+      <h2>Про нас</h2>
+      <p>Наша родинна справа почалась ще з бабусиного рецепту. Ми поєднали традиції та якість, щоб подарувати вам смак дитинства. Всі пельмені ліпляться вручну з натуральних інгредієнтів.</p>
+    </section>
+
+    <section id="menu">
+      <h2>Меню</h2>
+      <div class="card">
+        <h3>Класичні (свинина + яловичина)</h3>
+        <p>Ціна: 200 грн / кг</p>
+      </div>
+      <div class="card">
+        <h3>З куркою та зеленню</h3>
+        <p>Ціна: 190 грн / кг</p>
+      </div>
+      <div class="card">
+        <h3>Вегетаріанські (гриби, картопля)</h3>
+        <p>Ціна: 180 грн / кг</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Контакти</h2>
+      <p><strong>Адреса:</strong> м. Харків, вул. Смачнюча, 12</p>
+      <p><strong>Телефон:</strong> +380 67 123 4567</p>
+      <form>
+        <label for="name">Ім’я:</label><br />
+        <input type="text" id="name" name="name" placeholder="Ваше ім’я" required /><br /><br />
+
+        <label for="message">Повідомлення:</label><br />
+        <textarea id="message" name="message" placeholder="Ваше запитання або замовлення" rows="4" required></textarea><br /><br />
+
+        <button type="submit" class="btn">Надіслати</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Пельмені по-домашньому. Усі права захищені.</p>
+  </footer>
+</body>
+</html>
